@@ -1,0 +1,206 @@
+body {
+    width: 100%;
+    max-width: 2500px;
+    margin: 0 auto;
+    background: #444;
+    font-size: 1em;
+    font-family: 'Ubuntu', sans-serif;
+    overflow: hidden;
+}
+html {
+    scroll-behavior: smooth;
+}
+nav {
+    width: 100%;
+    height: 100px;
+    background: rgba(255, 255, 255, .93);
+    position: fixed;
+    z-index: 3;
+    top: 33px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    box-shadow: 2px 2px 9px rgba(67, 67, 67, .42);
+}
+    nav > span {
+        font-size: 2.3em;
+        letter-spacing: 3px;
+        position: relative;
+        top: 29px;
+        left: 21px;
+        color: #999;
+    }
+    nav > ul {
+        float: right;
+        position: relative;
+        right: calc(10% - 9px);
+        top: 16px;
+    }
+    ul li {
+        font-size: 2em;
+        font-weight: 500;
+        letter-spacing: 3px;
+        display: inline;
+        list-style: none;
+        margin: 0 9px;
+    }
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #f00;
+    }
+    #logo {
+        width: 110px;
+        margin-top: 10px;
+        margin-left: 10%;
+        float: left;
+    }
+    #hamburger {
+        display: none;
+        float: right;
+        position: relative;
+        right: calc(10% - 9px);
+        top: 32px;
+    }
+        #hamburger > .line {
+            width: 32px;
+            height: 6px;
+            background: #333;
+            margin: 4px 0;
+        }
+    #mobileNav {
+        position: absolute;
+        display: none;
+        min-width: 300px;
+        height: calc(100vh - 150px);
+        padding-top: 350px;
+        background: #00f;
+        margin-top: -200px;
+        right: -300px;
+        text-align: center;
+    }
+        #mobileNav > a {
+            display: block;
+            margin: 13px 0;
+            color: #fff;
+            font-size: 2em;
+            font-weight: 700;
+        }
+        #mobileNav > a:hover {
+            color: #f00;
+        }
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: radial-gradient(ellipse closest-side, 
+    rgba(15, 14, 22, 0.13), #100e17), 
+    url(../assets/images/headerBkg.jpg);
+    background-size: cover;
+}
+main {
+    width: 100%;
+}
+    section {
+        width: 80%;
+        height: 100vh;
+        padding: 0 10%;
+        padding-top: 150px;
+        background-image: radial-gradient(ellipse closest-side, 
+        rgba(15, 14, 22, 0.13), #100e17), 
+        url(../assets/images/double-bubble-dark.png);
+        overflow: hidden;
+    }
+    section:nth-child(odd) {
+        background-image: radial-gradient(ellipse closest-side, 
+        rgba(255, 255, 255, 0.13), 
+        rgba(255, 255, 255, .67)), 
+        url(../assets/images/double-bubble-outline.png);
+    }
+    section:last-child{
+        height: 65vh; /* vertical height */
+        background-image: radial-gradient(ellipse closest-side, 
+        rgba(255, 255, 255, 0.13),
+        rgba(255, 255, 255, .67)), 
+        url(../assets/images/mapBkg.jpg);
+        background-size: cover;
+    }
+    .godzillaText {
+        font-size: 19em;
+        font-weight: 900;
+        opacity: .21;
+        color: #bb8;
+    }
+    .godzillaText:nth-child(odd) {
+        color: #ccc;
+    }
+footer {
+    width: 100%;
+    height: 260px;
+    padding-top: 30px;
+    background: #555;
+    color: #fff;
+    clear: both;
+}
+    #leftFoot {
+        float: left;
+        height: 220px;
+        width: calc(50% - 2px);
+        border-right: 2px solid #fff;
+        color: #fff;
+        text-align: right;
+    }
+        #leftFoot > img {
+            display: block;
+            margin-left: 90%;
+            width: 64px;
+        }
+    #rightFoot {
+        float: left;
+        height: 190px;
+        padding-top: 30px;
+        width: calc(50% - 20px);
+        padding-left: 20px;
+        color: #fff;
+    }
+        #rightFoot > label {
+            display: block;
+            font-weight: 500;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+    .toTop {
+        width: 64px;
+        height: 64px;
+        text-align: center;
+        font-size: 3em;
+        font-weight: 700;
+        background: rgba(255, 255, 255, .42);
+        position: fixed;
+        z-index: 13;
+        bottom: 21px;
+        right: 10%;
+        border-radius: 50%;
+        color: #333;
+        cursor: pointer;
+        border: 2px solid #333;
+        box-shadow: 2px 2px 9px rgba(67, 67, 67, .42);
+    }
+    .toTop:hover {
+        background: rgb(255, 255, 255);
+        color: #8F5CD9;
+        border: 2px solid #8F5CD9;
+    }
+
+@media only screen and (max-width: 1250px) {
+    nav > ul {
+        display: none;
+    }
+    #hamburger {
+        display: inline;
+    }
+    #mobileNav {
+        position: fixed;
+        z-index: 2;
+    }
+}

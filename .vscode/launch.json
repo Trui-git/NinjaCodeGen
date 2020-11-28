@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "args": ["-cc","-ccc", "--t"],
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-test5<test5_fb271209>",
+            "request": "launch",
+            "mainClass": "test5",
+            "projectName": "test5_fb271209"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-C",
+            "request": "launch",
+            "mainClass": "C"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MainTest",
+            "request": "launch",
+            "mainClass": "MainTest"
+        }
+    ]
+}
