@@ -1,0 +1,11 @@
+1.create jar package with manifest.txt:
+jar -cvmf manifest.txt name.jar *.class 
+
+2. install launch4j and using command start program to make exe file
+java -jar launch4j.jar
+
+3. follow the setting in LaunchJ4 Setting.pptx
+
+4. copy form JDK the entire folder bin and lib to runtime folder
+
+5. pack exe file, basicCodeFiles, templateCodeFiles, runtime folders to zip
