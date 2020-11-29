@@ -1,7 +1,4 @@
-
-import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -75,6 +72,7 @@ public class Validator {
             }
             case "-d": { // documents folder
                 //location = new JFileChooser().getFileSystemView().getDefaultDirectory().toString() + "\\";
+                // 200ms less time consumming with FileSystemView than JFileChooser
                 location = FileSystemView.getFileSystemView().getDefaultDirectory().getPath() + "\\";
                 // System.out.println("from -d");
                 break;

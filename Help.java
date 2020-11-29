@@ -16,9 +16,9 @@ public class Help {
 
     public void PrintLocationOptions() {
         System.out.println("Directory Options:");
-        System.out.println("-- Empty will be as same as -c");
         System.out.println("-c : creates directory in current location");
         System.out.println("-d : creates directory in your documents folder\n");
+        System.out.println("-- Empty directory will be as same as option -c");
     } // PrintLocationOptions()
 
     public void PrintFolderOptions() {
@@ -30,8 +30,8 @@ public class Help {
 
     public void PrintTypeOptions() {
         System.out.println("Site/Files Options:");
-        System.out.println("-- Empty will be as same as -b");
         System.out.println("-b : creates a basic site with index.html app.css app.js files.");
         System.out.println("-t : creates a site template with all files and default layout.");
+        System.out.println("-- Empty Site/Files will be as same as option -b");
     } // PrintTypeOptions()
 } // Help()
