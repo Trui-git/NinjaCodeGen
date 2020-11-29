@@ -1,5 +1,7 @@
 
 import javax.swing.*;
+import javax.swing.filechooser.FileSystemView;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -62,9 +64,7 @@ public class Validator {
             commandText.delete(dashPos, 2);
         }
         else {
-            System.out.println("\nUndefined directory options!");
-            help.PrintLocationOptions();
-            System.exit(0);
+            location = "";
         }
 
         switch(location) {
@@ -74,7 +74,8 @@ public class Validator {
                 break;
             }
             case "-d": { // documents folder
-                location = new JFileChooser().getFileSystemView().getDefaultDirectory().toString() + "\\";
+                //location = new JFileChooser().getFileSystemView().getDefaultDirectory().toString() + "\\";
+                location = FileSystemView.getFileSystemView().getDefaultDirectory().getPath() + "\\";
                 // System.out.println("from -d");
                 break;
             }

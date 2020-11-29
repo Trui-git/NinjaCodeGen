@@ -153,5 +153,19 @@
 
 
     java -jar launch4j.jar
-
     jar -cvmf manifest.txt name.jar *.class 
+
+    test class
+    -cc -ccc -" " -x -xyz
+    dfdsfdfg -t
+    folder
+    -c folder
+    -czy folder
+    -c -b
+    // -x folder
+    // -xyz folder
+    // -c -b thanks Rui
+    // -c folder name -b
+
+    release location
+    https://github.com/Trui-git/NinjaCodeGen/releases/tag/NinjaCodeGen

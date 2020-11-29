@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
-            "args": ["-cc","-ccc", "--t"],
+            "args": ["-d", "SSS", "-t"],
             "mainClass": "${file}"
         },
         {

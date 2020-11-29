@@ -10,8 +10,8 @@ public class Help {
     }
     public void PrintGeneralWaring() {
         System.out.print("\nUsage: ");
-        System.out.print("NCG [Help], ");
-        System.out.println("NCG [Directory Option] Folder [Site/Files Option]\n");
+        System.out.print("NinjaCodeGen [Help], ");
+        System.out.println("NinjaCodeGen [Directory Option] Folder [Site/Files Option]\n");
     } // PrintGeneralWaring()
 
     public void PrintLocationOptions() {
