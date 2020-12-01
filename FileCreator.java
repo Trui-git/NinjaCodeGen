@@ -111,6 +111,8 @@ public class FileCreator {
         }
         else
         {
+            CopyFile(source, destination);
+            /*
             InputStream in = null;
             OutputStream out = null;
     
@@ -147,9 +149,72 @@ public class FileCreator {
                     e1.printStackTrace();
                 }
             }
+            */
         }
     } // CopyFolder
 
+    public void CopyFile(File source, File destination) {
+        InputStream in = null;
+        OutputStream out = null;
+        try
+        {
+            in = new FileInputStream(source);
+            out = new FileOutputStream(destination);
+
+            byte[] buffer = new byte[1024];
+
+            int length;
+            while ((length = in.read(buffer)) > 0)
+            {
+                out.write(buffer, 0, length);
+            }
+        }
+        catch (Exception e)
+        {
+            try
+            {
+                in.close();
+            }
+            catch (IOException e1)
+            {
+                e1.printStackTrace();
+            }
+
+            try
+            {
+                out.close();
+            }
+            catch (IOException e1)
+            {
+                e1.printStackTrace();
+            }
+        }
+    }
+
+    public void CopyFolderFiles(String src, String dest)  {
+
+        try {
+            File srcDir = new File(src);   
+            File filesList[] = srcDir.listFiles();
+            for(File file : filesList) {
+                if (file.isFile() && !file.toString().contains("template.html")) {
+                    File srcFile = new File(src + "\\" + file.getName());
+                    File destFile = new File(dest + "\\" + file.getName());
+                    if (destFile.exists()) {
+                        System.out.println("Skipped: " + destFile + " already exists!");
+                    }
+                    else {
+                        CopyFile(srcFile, destFile);
+                        System.out.println("Copied: " + destFile);
+                    }
+                }
+            }
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }        
+    }
+    
     public String GenerateFiles(String location, String directoryName) {
 
         if(projectType.equals("basic")) {
@@ -159,6 +224,7 @@ public class FileCreator {
             CreateFile(location + directoryName + "\\scripts\\app.js", "js");
         }
         else {
+            CopyFolderFiles("templateCodeFiles", location + directoryName);
             ReadFile(".\\templateCodeFiles\\template.html");
             CreateFile(location + directoryName + "\\index.html", "html");
             ReadFile(".\\templateCodeFiles\\css\\app.css");
