@@ -22,6 +22,3 @@ Empty will be as same as -b
 Compilation command: javac NCGMain.java
 Sample run command:  java NCGMain -c sample -b
 Sample release run command: NinjaCodeGen -c sample -b
-
-release location
-https://github.com/Trui-git/NinjaCodeGen/releases/tag/NinjaCodeGen
