@@ -31,7 +31,7 @@ public class Validator {
         // foldername -b
         if(args[0].length() != 2 && args[0].charAt(0) == '-') {
             System.out.println("\nDirectory option wrong!");
-            help.PrintAllHelp();
+            help.PrintLocationOptions();
             System.exit(0);
         }
         else if (args.length <= 3 && args.length > 0) {
@@ -39,6 +39,35 @@ public class Validator {
                 System.out.println("\nSite/File option wrong!\n");
                 help.PrintTypeOptions();
                 System.exit(0);
+            }
+            if ((args.length == 2) && !args[0].contains("-") && !args[1].contains("-")){
+                System.out.println("\nFolder option wrong!\n");
+                help.PrintFolderOptions();
+                System.exit(0);
+            }
+            if ((args.length == 2) && !args[0].contains("-") && args[1].contains("-")){
+                if(args[1].charAt(0) != '-'){
+                    System.out.println("\nSite/File option wrong!\n");
+                    help.PrintTypeOptions();
+                    System.exit(0);
+                }
+            }
+            if ((args.length == 2) && args[0].contains("-") && !args[1].contains("-")){
+                if(args[0].charAt(0) != '-'){
+                    System.out.println("\nDirectory option wrong!\n");
+                    help.PrintLocationOptions();
+                    System.exit(0);
+                }
+            } 
+            if (args.length == 1) {
+                // check for alphanumeric
+                Pattern pattern = Pattern.compile("[a-zA-Z0-9]*");
+                Matcher matcher = pattern.matcher(args[0]);
+                if (!matcher.matches()) {
+                    System.out.println("\nWrong Folder Name!\n");
+                    help.PrintFolderOptions();
+                    System.exit(0);
+                }
             }
             for (String arg : args) {
                 this.commandText.append(arg);

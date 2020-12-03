@@ -112,44 +112,6 @@ public class FileCreator {
         else
         {
             CopyFile(source, destination);
-            /*
-            InputStream in = null;
-            OutputStream out = null;
-    
-            try
-            {
-                in = new FileInputStream(source);
-                out = new FileOutputStream(destination);
-    
-                byte[] buffer = new byte[1024];
-    
-                int length;
-                while ((length = in.read(buffer)) > 0)
-                {
-                    out.write(buffer, 0, length);
-                }
-            }
-            catch (Exception e)
-            {
-                try
-                {
-                    in.close();
-                }
-                catch (IOException e1)
-                {
-                    e1.printStackTrace();
-                }
-    
-                try
-                {
-                    out.close();
-                }
-                catch (IOException e1)
-                {
-                    e1.printStackTrace();
-                }
-            }
-            */
         }
     } // CopyFolder
 

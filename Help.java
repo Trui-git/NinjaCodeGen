@@ -3,7 +3,7 @@ public class Help {
     public Help() { } // Constructor
 
     public void PrintAllHelp() {
-        System.out.print("\nNinjaCodeGen Version 3\n");
+        System.out.print("\nVersion 4.0.0");
         PrintGeneralWaring();
         PrintLocationOptions();
         PrintFolderOptions();
