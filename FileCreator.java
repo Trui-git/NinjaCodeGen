@@ -215,7 +215,7 @@ public class FileCreator {
         }        
     }
     
-    public String GenerateFiles(String location, String directoryName) {
+    public void GenerateFiles(String location, String directoryName) {
 
         if(projectType.equals("basic")) {
             ReadFile(".\\basicCodeFiles\\basic.html");
@@ -235,9 +235,6 @@ public class FileCreator {
             CreateFile(location + directoryName + "\\scripts\\jquery.js", "js");
             CreateAssets(".\\templateCodeFiles\\assets", location + directoryName + "\\assets\\");
         }
-
-
-        return "";
     }
 
 } // class
