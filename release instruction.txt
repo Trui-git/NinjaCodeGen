@@ -1,5 +1,5 @@
 1.create jar package with manifest.txt:
-jar -cvmf manifest.txt name.jar *.class 
+jar -cvmf manifest.txt NinjaCodeGen.jar *.class 
 
 2. install launch4j and using command start program to make exe file
 java -jar launch4j.jar

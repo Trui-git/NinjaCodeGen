@@ -3,6 +3,7 @@ public class Help {
     public Help() { } // Constructor
 
     public void PrintAllHelp() {
+        System.out.print("\nNinjaCodeGen Version 3\n");
         PrintGeneralWaring();
         PrintLocationOptions();
         PrintFolderOptions();
@@ -17,8 +18,8 @@ public class Help {
     public void PrintLocationOptions() {
         System.out.println("Directory Options:");
         System.out.println("-c : creates directory in current location");
-        System.out.println("-d : creates directory in your documents folder\n");
-        System.out.println("-- Empty directory will be as same as option -c");
+        System.out.println("-d : creates directory in your documents folder");
+        System.out.println("-- Empty directory will be as same as option -c\n");
     } // PrintLocationOptions()
 
     public void PrintFolderOptions() {
@@ -32,6 +33,6 @@ public class Help {
         System.out.println("Site/Files Options:");
         System.out.println("-b : creates a basic site with index.html app.css app.js files.");
         System.out.println("-t : creates a site template with all files and default layout.");
-        System.out.println("-- Empty Site/Files will be as same as option -b");
+        System.out.println("-- Empty Site/Files will be as same as option -b\n");
     } // PrintTypeOptions()
 } // Help()
